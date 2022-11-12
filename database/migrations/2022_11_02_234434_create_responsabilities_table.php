@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('responsabilities', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->date('hire_date');
+            $table->string('project_assignment');
+            $table->string('job_description');
+
             $table->timestamps();
         });
     }

@@ -17,23 +17,23 @@ return new class extends Migration
             $table->id();
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('personal_photo');
+            $table->string('personal_photo')->nullable();
             $table->string('email')->unique();
             $table->string('position');
-            $table->string('role');
+
             //the position and the role means the same things
-            $table->string('employee_status');
-            $table->string('organizational_unit');
-            $table->integer('competency_ranting');
-            $table->string('fax');
-            $table->string('mobile');
-            $table->string('im_type');
-            $table->string('im_name');
-            $table->string('adresse');
-            $table->string('country');
-            $table->string('city');
-            $table->string('state');
-            $table->integer('postal_code');
+            $table->string('employee_status')->nullable();
+            $table->string('organizational_unit')->nullable();
+            $table->integer('competency_ranting')->nullable();
+            $table->string('fax')->nullable();
+            $table->string('mobile')->nullable();
+            $table->string('im_type')->nullable();
+            $table->string('im_name')->nullable();
+            $table->string('adresse')->nullable();
+            $table->string('country')->nullable();
+            $table->string('city')->nullable();
+            $table->string('state')->nullable();
+            $table->integer('postal_code')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
